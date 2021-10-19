@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+        display:flex;
+        flex-direction:column;
+        }
+        form{
+        width:300px;
+        border: solid 1px #000;
+        padding: 1rem;
+        border-radius: 10px;
+        }
+
+        form div{
+        margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form>
+          <div>
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username">
+          </div>
+      
+          <div>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password">
+          </div>
+      
+          <div>
+              <label for="show-password">
+                  <input type="checkbox" name="show-passwords" id="show-password">
+                  Show password
+              </label>
+          </div>
+      
+          <p>
+              <button type="submit">Log In</button>
+          </p>
+      </form>
+      </div>
+      <script>
+          let d = document;
+        let password = d.getElementById("password");
+        let checkbox = d.getElementById("show-password");
+
+        checkbox.addEventListener( "change", function( event ) {
+        if ( this.checked ) {
+            password.type = 'text';
+        } else{
+            password.type = 'password';
+        }
+        })
+      </script>
+</body>
+</html>
