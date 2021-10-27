@@ -10,3 +10,5 @@ w2_excersice_3 : Announcing the Count
 
 #Week 3
 w3_excercise_1 : Random Ron
+w3_excercise_2 : Random Ron remove duplicate
+w3_excercise_1 : Random Ron with async await
