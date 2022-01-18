@@ -1,0 +1,30 @@
+body{
+    background-color: #EFEFEF;
+}
+.container{
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+textarea{
+    margin: 0.3rem auto;
+}
+p{
+    margin: 0;
+    padding: 0;
+}
+.form-content{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    -webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.47); 
+    box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.47);
+}
+

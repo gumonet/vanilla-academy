@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  height: 98vh;
+}
+
+form{
+  border:solid 1px #f1f1f1;
+  padding: 1rem;
+}
+
+form div{
+  width: 100%;
+  display:flex;
+  justify-content: space-betwen;
+  margin: 10px auto;
+}
+
+form label{
+  width: 50%;
+}
+form input[type=password], form input[type=text]{
+  width:50%;
+  padding: 5px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <form>
+          <div>
+              <label for="current-password">Current Password</label>
+              <input type="password" name="current-password" id="current-password">
+          </div>
+      
+          <div>
+              <label for="new-password">New Password</label>
+              <input type="password" name="new-password" id="new-password">
+          </div>
+      
+          <div>
+              <label for="show-passwords">
+                  <input type="checkbox" name="show-passwords" id="show-passwords">
+                  Show passwords
+              </label>
+          </div>
+      
+          <p>
+              <button type="submit">Change Passwords</button>
+          </p>
+      </form>
+      </div>
+      <script>
+          let d = document;
+let password_inputs = d.querySelectorAll("[type=password]");
+let hide_passwords  = d.querySelector("#show-passwords");
+
+hide_passwords.addEventListener("change", function ( event ) {
+   
+  for ( let password_input of password_inputs ) {
+     if ( this.checked ) {
+        password_input.type = 'text';
+      } else{
+        password_input.type = 'password';
+      }
+  }
+  
+})
+
+      </script>
+</body>
+</html>
